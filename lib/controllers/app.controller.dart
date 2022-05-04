@@ -5,7 +5,7 @@ class AppController extends ChangeNotifier {
 
   static AppController instance = AppController();
 
-  changeTheme() {
+  changeAppTheme() {
     isDarkTheme = !isDarkTheme;
     notifyListeners();
   }
