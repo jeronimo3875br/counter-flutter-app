@@ -1,6 +1,6 @@
-import "./screens/home.screen.dart";
 import "package:flutter/material.dart";
 import "./controllers/app.controller.dart";
+import "./screens/login.screen.dart";
 
 class App extends StatelessWidget {
   @override
@@ -10,11 +10,11 @@ class App extends StatelessWidget {
         builder: (context, widget) {
           return MaterialApp(
               theme: ThemeData(
-                  primarySwatch: Colors.deepPurple,
+                  primarySwatch: Colors.deepOrange,
                   brightness: AppController.instance.isDarkTheme
                       ? Brightness.dark
                       : Brightness.light),
-              home: Home());
+              home: const Login());
         });
   }
 }
