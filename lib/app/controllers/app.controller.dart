@@ -1,12 +1,12 @@
 import "package:flutter/material.dart";
 
 class AppController extends ChangeNotifier {
-  bool isDarkTheme = false;
+  bool isThemeDark = false;
 
   static AppController instance = AppController();
 
-  changeAppTheme() {
-    isDarkTheme = !isDarkTheme;
+  changeTheme() {
+    isThemeDark = !isThemeDark;
     notifyListeners();
   }
 }

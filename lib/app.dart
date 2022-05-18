@@ -1,7 +1,6 @@
-import 'app/views/home.screen.dart';
-import 'app/views/login.screen.dart';
+import "./app/views/home.view.dart";
 import "package:flutter/material.dart";
-import 'app/controllers/app.controller.dart';
+import "./app/controllers/app.controller.dart";
 
 class App extends StatelessWidget {
   @override
@@ -10,16 +9,14 @@ class App extends StatelessWidget {
         animation: AppController.instance,
         builder: (context, widget) {
           return MaterialApp(
-              theme: ThemeData(
-                  appBarTheme: const AppBarTheme(backgroundColor: Colors.black),
-                  brightness: AppController.instance.isDarkTheme
-                      ? Brightness.dark
-                      : Brightness.light),
-              home: const Login(),
-              routes: {
-                "/login": (context) => const Login(),
-                "/home": (context) => Home()
-              });
+            theme: ThemeData(
+              primarySwatch: Colors.red,
+              brightness: AppController.instance.isThemeDark
+                  ? Brightness.dark
+                  : Brightness.light,
+            ),
+            home: Home(),
+          );
         });
   }
 }
